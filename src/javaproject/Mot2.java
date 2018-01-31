@@ -3,8 +3,8 @@ package javaproject;
 import java.util.ArrayList;
 
 public class Mot2 {
-	ArrayList<String>  generator(int n) {
-		//TODO 
+
+	public ArrayList<String> generator(int n) {
 		ArrayList<String> result = new ArrayList<String>();
 		if(n==0) {
 			result.add("leaf");
@@ -17,27 +17,25 @@ public class Mot2 {
 		}
 		for(int k = 0;k < n-2;k++) {
 			ArrayList<String> nodes1 = generator(k);
+			ArrayList<String> nodes2 =generator(n-2-k);
 			   for(String node1: nodes1) {
-				ArrayList<String> nodes2 =generator(n-2-k);
 				for(String node2: nodes2) {
 					result.add("binary(" + node1 + "," + node2 + ")");
-		//return result;
 				}
 			}
 		}
-		return nodes;
+		return result;
 		
 	}
 	
-	
-	
-	
-	
-	public static void main() {
+	public static void main(String args[]) {
+		ArrayList<String> al = new ArrayList<>();
 		Mot2 m = new Mot2();
 		for(int i = 0;i<6;i++)	{
-				m.generator(6);
+				al = m.generator(i);
+				System.out.println(al.toString());
 		}
+
 	}
 
 }
