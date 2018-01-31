@@ -1,0 +1,15 @@
+<project>
+    <repositories>
+        <repository>
+            <id>java-generator-functions</id>
+            <url>http://dl.bintray.com/filipmalczak/maven</url>
+        </repository>
+    </repositories>
+    <dependencies>
+        <dependency>
+            <groupId>io.herrmann</groupId>
+            <artifactId>java-generator-functions</artifactId>
+            <version>1.0</version>
+        </dependency>
+    </dependencies>
+</project>
